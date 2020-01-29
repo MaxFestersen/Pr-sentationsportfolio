@@ -6,7 +6,7 @@
 
 var i = 0; // Set inital value. Will be owerwritten.
 // Subtitles to choose from
-var subTitles = ['koder', 'kodning', 'udvikler', 'udvikling', 'programmør', 'programmering', 'ux', 'ux-designer', 'projektleder', 'master', 'design', 'designer', 'user', 'tester', 'integrator', 'content creator', 'developer', 'grafiker', 'analytikker', 'blogger', 'video producer', 'skribent', 'app udvikler', 'specialist', 'media-specialist', 'animator', 'animation', 'HELLO WORLD'];
+var subTitles = ['koder', 'kodning', 'udvikler', 'udvikling', 'programmør', 'programmering', 'ux', 'ux-designer', 'projektleder', 'master', 'design', 'designer', 'user', 'tester', 'integrator', 'content creator', 'developer', 'grafiker', 'analytiker', 'blogger', 'video producer', 'skribent', 'app udvikler', 'specialist', 'media-specialist', 'animator', 'animation', 'HELLO WORLD'];
 // Variables used in functions
 var subTitle = document.getElementById("siteSubTitlePartTwo").innerHTML;;
 var cuttentSub = ""; //Empty string | Will be owerwritten.
