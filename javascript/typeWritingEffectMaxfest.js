@@ -3,6 +3,7 @@
 // * w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 // * https://codepen.io/hi-im-si/pen/DHoup
 // * A unreleased depression simulator made for "Lær at tackle" - 
+console.log("Created and owned by Max Festersen Hansen.")
 
 var i = 0; // Set inital value. Will be owerwritten.
 // Subtitles to choose from
