@@ -1302,7 +1302,12 @@ body > footer a:active{
 .caseLeft, .caseRight{
 	float: left;
 	width: 100%;
+}
+.caseLeft{
 	height: 100%;
+}
+.caseRight{
+	height: auto;
 }
 #caseViewSmokingpenguin-animation iframe{
 	width: 480px;
