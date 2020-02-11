@@ -35,7 +35,7 @@ document.addEventListener('keyup', event => {
 
 // --- "Special" code ---
 var specialSound = new Audio();
-specialSound.src = "sound/maxFestSound.mp3";
+specialSound.src = "sound/specialSound.mp3";
 var specialCombo = ["arrowup", "arrowup", "arrowdown", "arrowdown", "arrowleft", "arrowright", "arrowleft", "arrowright", "b", "a", "enter"];
 function specialCheck(keys){
 	//console.log(keys);
