@@ -1309,6 +1309,10 @@ body > footer a:active{
 .caseRight{
 	height: auto;
 }
+.caseLeftLongHover > img, .caseLeftLongHover > iframe, .caseLeftLongHover > video{
+	/*	Note: Mostly doesn't work with iframe.	*/
+	cursor: none;
+}
 #caseViewSmokingpenguin-animation iframe{
 	width: 480px;
 	height: 480px;
