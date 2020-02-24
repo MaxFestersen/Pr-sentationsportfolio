@@ -1,4 +1,4 @@
-// Easter eggs
+// Key pressing functions
 // --- Track key presses ---
 var keysDown = [];
 var keysPressed = [];
@@ -12,6 +12,7 @@ document.addEventListener('keydown', event => {
 		// End function if the key did not change.
 	}
 	curKey = downKey; // Update last pressed key ino
+	//console.log(curKey);
 	keysDown.push(downKey); // Add to array of currently pressed keys
 	//console.log('Down: ' + downKey);
 	// Check for Max Code
@@ -25,6 +26,10 @@ document.addEventListener('keyup', event => {
 	keysPressed.push(upKey); // Add to array of keys that has been pressed
 	keysDown.splice( keysDown.indexOf(upKey), 1 ); // Remove to array of currently pressed keys
 	//console.log('Up: ' + upKey);
+	// Check for escape press (to close open content)
+	if(upKey == "escape"){
+		hideByEscape();
+	}
 	
 	// Limit keyPressed to 11 values
 	keysPressed = arrayLength(keysPressed, 11);
@@ -32,6 +37,15 @@ document.addEventListener('keyup', event => {
 	// Check for Special code
 	specialCheck(keysPressed);
 });
+
+function hideByEscape(){
+	var skill = document.getElementsByClassName("skill");
+	for (var i = 0; i < skill.length; i++) {
+		skill[i].getElementsByClassName("fullPageCover");
+		firstMatch = classMatches[0];
+		firstMatch.classList.add("hidden");
+	}
+}
 
 // --- "Special" code ---
 var specialSound = new Audio();
