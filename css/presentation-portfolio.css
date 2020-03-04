@@ -182,28 +182,24 @@ h1:before, h2:before{
 	line-height: 76px;
 }
 #siteSubTitle{
-	margin-left: 40px;
-	font-size: 32px;
-	line-height: 53px;
-}
-#siteSubTitlePartTwo{
-	margin-left: 3px; /*Shaddow disetance*/
-	margin-top: 4px;
-	font-size: inherit;
-	line-height: 46px; /*Line height of parrent minus padding and shaddow*/
+	float: left;
+	line-height: 46px; /*indended line height minus padding and shaddow*/
 	padding: 2px 8px;
 	border-radius:4px;
-	color: #272727;
-	text-shadow: none;
-	background-color: #f7f7f7;
+	margin-left: 43px; /* styalized distance + Shaddow disetance*/
+	margin-top: 4px;
 	box-shadow: -3px -4px #6D6B88;
 	-webkit-text-stroke-width: 0;
 	-webkit-text-stroke-color: transparent;
+	font-size: 32px;
+	color: #272727;
+	text-shadow: none;
+	background-color: #f7f7f7;
 }
-#siteSubTitlePartTwo:after{
+#siteSubTitle:after{
 	content: "|";
 }
-#siteSubTitlePartTwo.inActive:after{
+#siteSubTitle.inActive:after{
 	animation-name: blink;
 	animation-duration: 0.53s;
 	animation-delay: 0s;
@@ -279,6 +275,7 @@ h5{
 }*/
 @media screen and (max-width: 775px){ /* Tablet */
 	#siteTitle, #siteSubTitle{
+		float: none;
 		text-align: center;
 		color: #272727;
 		-webkit-text-stroke-width: 0;

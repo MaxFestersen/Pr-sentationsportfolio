@@ -7,9 +7,12 @@ console.log("Created and owned by Max Festersen Hansen.")
 
 var i = 0; // Set inital value. Will be owerwritten.
 // Subtitles to choose from
-var subTitles = ['koder', 'kodning', 'udvikler', 'udvikling', 'programmør', 'programmering', 'ux', 'ux-designer', 'projektleder', 'master', 'design', 'designer', 'user', 'tester', 'integrator', 'content creator', 'developer', 'grafiker', 'analytiker', 'blogger', 'video producer', 'skribent', 'app udvikler', 'specialist', 'media-specialist', 'animator', 'animation', 'HELLO WORLD'];
+var subTitles = ['Web-koder', 'Udvikler', 'Udvikling', 'Programmør', 'Ux-designer', 'Projektleder', 'Web-master', 'Designer', 'Web designer', 'Internet user', 'Web-tester', 'Web integrator', 'Content creator', 'Developer', 'Grafiker', 'Web analytiker', 'Blogger', 'Video producer', 'Web skribent', 'App udvikler', 'Web specialist', 'Media-specialist', 'Animator', 'Multimediedesigner', 'Nørd', 'Hansen', 'Business intelligence', 'BI-secialist', 'SEO specialist', 'Scrum master', 'Lean specialist', 'Facilitator', 'Medieproducent', 'Erhvervsjura kyndig', 'Navigationsdesigner'];
+subTitles.sort(() => Math.random() - 0.5);
+var currentSubTitleNum = 0;
+subTitles.push('HELLO WORLD', 'Du har set på dette længe min ven.')
 // Variables used in functions
-var subTitle = document.getElementById("siteSubTitlePartTwo").innerHTML;;
+var subTitle = document.getElementById("siteSubTitle").innerHTML;;
 var cuttentSub = ""; //Empty string | Will be owerwritten.
 var newSub = ""; //Empty string | Will be owerwritten.
 var newSubTitle = ""; //Empty string | Will be owerwritten.
@@ -25,14 +28,14 @@ var newSubTitle = ""; //Empty string | Will be owerwritten.
 */
 // Warning: Using function will create a infinte loop.
 function typeWrite() { 
-	cuttentSub = document.getElementById("siteSubTitlePartTwo").innerHTML;
-	document.getElementById("siteSubTitlePartTwo").classList.remove("inActive");
+	cuttentSub = document.getElementById("siteSubTitle").innerHTML;
+	document.getElementById("siteSubTitle").classList.remove("inActive");
 	if(cuttentSub == subTitle){
 		i = 0; //Reset
-		document.getElementById("siteSubTitlePartTwo").classList.add("inActive");
+		document.getElementById("siteSubTitle").classList.add("inActive");
 		setTimeout(typeDelete, 5300); // 5 blinks
 	} else{
-		document.getElementById("siteSubTitlePartTwo").innerHTML += subTitle.charAt(i);
+		document.getElementById("siteSubTitle").innerHTML += subTitle.charAt(i);
 		i++;
 		setTimeout(typeWrite, 150);
 	}
@@ -50,20 +53,25 @@ function typeWrite() {
  */
 // Warning: Using function will create a infinte loop.
 function typeDelete() { 
-	cuttentSub = document.getElementById("siteSubTitlePartTwo").innerHTML;
-	document.getElementById("siteSubTitlePartTwo").classList.remove("inActive");
+	cuttentSub = document.getElementById("siteSubTitle").innerHTML;
+	document.getElementById("siteSubTitle").classList.remove("inActive");
 	if(cuttentSub==""){
 		i = 0; //Reset
 		while(newSubTitle == "" ||  newSubTitle == subTitle){
-			newSubTitle = subTitles[Math.floor(Math.random()*subTitles.length)];
+			if(currentSubTitleNum < subTitles.length - 1){
+				currentSubTitleNum++;
+			} else{
+				currentSubTitleNum = 0;
+			}
+			newSubTitle = subTitles[currentSubTitleNum];
 		}
 		subTitle = newSubTitle;
-		document.getElementById("siteSubTitlePartTwo").classList.add("inActive");
+		document.getElementById("siteSubTitle").classList.add("inActive");
 		setTimeout(typeWrite, 1060); // 1 blinks
 	} else{
 		i = cuttentSub.length-1;
 		newSub = cuttentSub.slice(0, i);
-		document.getElementById("siteSubTitlePartTwo").innerHTML = newSub;
+		document.getElementById("siteSubTitle").innerHTML = newSub;
 		setTimeout(typeDelete, 100);
 	}
 }
