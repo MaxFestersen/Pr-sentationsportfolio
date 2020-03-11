@@ -12,17 +12,17 @@ var iframeDoc = false;
 var onmousestop = function() {
 		// Mouse stopped moving
 		caseLeft[0].classList.add("caseLeftLongHover");
-		iframe = document.querySelector('iframe');
-		iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-		iframeDoc.body.style.cursor = 'none';
+		//iframe = document.querySelector('iframe');
+		//iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+		//iframeDoc.body.style.cursor = 'none';
 	}, thread;
 	return function() {
 		// Mouse stopped moving for 2 seconds
 		caseLeft[0].classList.remove("caseLeftLongHover");
 		clearTimeout(thread);
-		iframe = document.querySelector('iframe');
-		iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-		iframeDoc.body.style.cursor = 'auto';
+		//iframe = document.querySelector('iframe');
+		//iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+		//iframeDoc.body.style.cursor = 'auto';
 		thread = setTimeout(onmousestop, 2000);
 	};
 })();
