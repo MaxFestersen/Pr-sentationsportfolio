@@ -364,7 +364,7 @@ a img{
 	border: none;
 }
 figure{
-	display:inline-block;
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
@@ -372,7 +372,7 @@ figure span.fas{
 	font-family: "Font Awesome 5 Pro";
 }
 .hiddenDescription{
-	display:none;
+	display: none;
 }
 .largeDisplay{
 	display: none;
